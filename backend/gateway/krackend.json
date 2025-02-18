@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "name": "API Gateway",
+    "endpoints": [
+        {
+            "endpoint": "/auth",
+            "backend": [{"url_pattern": "/register", "host": ["http://auth_service:5000"]}]
+        },
+        {
+            "endpoint": "/tasks",
+            "backend": [{"url_pattern": "/tasks", "host": ["http://task_service:5001"]}]
+        }
+    ]
+}
